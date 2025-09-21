@@ -1,0 +1,263 @@
+/* Catppuccin Mocha Color Palette */
+:root {
+  --base: #1e1e2e;
+  --mantle: #181825;
+  --crust: #11111b;
+  --surface0: #313244;
+  --surface1: #45475a;
+  --surface2: #585b70;
+  --overlay0: #6c7086;
+  --overlay1: #7f849c;
+  --overlay2: #9399b2;
+  --subtext0: #a6adc8;
+  --subtext1: #bac2de;
+  --text: #cdd6f4;
+  --lavender: #b4befe;
+  --blue: #89b4fa;
+  --sapphire: #74c7ec;
+  --sky: #89dceb;
+  --teal: #94e2d5;
+  --green: #a6e3a1;
+  --yellow: #f9e2af;
+  --peach: #fab387;
+  --maroon: #eba0ac;
+  --red: #f38ba8;
+  --mauve: #cba6f7;
+  --pink: #f5c2e7;
+  --flamingo: #f2cdcd;
+  --rosewater: #f5e0dc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--base);
+  color: var(--text);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+  background-color: var(--mantle);
+  color: var(--text);
+  padding: 1rem 0;
+  text-align: center;
+  border-bottom: 1px solid var(--surface0);
+}
+
+h1 {
+  color: var(--lavender);
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin-bottom: 0;
+}
+
+nav a {
+  color: var(--sapphire);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+
+nav a:hover {
+  background-color: var(--surface1);
+  color: var(--blue);
+  border-color: var(--surface2);
+  transform: translateY(-2px);
+}
+
+nav a:active {
+  transform: translateY(0);
+}
+
+/* Links */
+a {
+  color: var(--sapphire);
+  text-decoration: underline;
+  text-decoration-color: var(--surface2);
+  text-underline-offset: 3px;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--blue);
+  text-decoration-color: var(--blue);
+  text-decoration-thickness: 2px;
+}
+
+a:visited {
+  color: var(--mauve);
+}
+
+a:visited:hover {
+  color: var(--pink);
+}
+
+/* External link indicator */
+a[target="_blank"]::after {
+  content: " ↗";
+  color: var(--overlay1);
+  font-size: 0.8em;
+}
+
+/* Main Content */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  background-color: var(--surface0);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+section {
+  padding: 2rem;
+  border-bottom: 1px solid var(--surface1);
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+h2 {
+  color: var(--blue);
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: var(--sapphire);
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+strong {
+  color: var(--yellow);
+}
+
+em {
+  color: var(--pink);
+}
+
+/* Button Styles */
+.btn-primary,
+.btn-secondary {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: var(--blue);
+  color: var(--crust);
+}
+
+.btn-primary:hover {
+  background-color: var(--lavender);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: var(--surface2);
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  background-color: var(--overlay0);
+  transform: translateY(-2px);
+}
+
+/* Card Component */
+.card {
+  background-color: var(--surface1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 1rem;
+  border-left: 4px solid var(--mauve);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Lists */
+ul,
+ol {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  color: var(--subtext1);
+}
+
+li::marker {
+  color: var(--green);
+}
+
+/* Footer */
+footer {
+  background-color: var(--crust);
+  color: var(--subtext0);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--surface0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  main {
+    margin: 1rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    margin-right: 0;
+  }
+}
